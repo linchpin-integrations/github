@@ -1,6 +1,6 @@
 {
   "name": "lpi-github",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LinchPin Github integration",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
     "istanbul": "^0.3.13",
     "chai": "2.3.0",
     "mocha": "*",
-    "getenv":"*"
+    "getenv": "*"
   }
 }
