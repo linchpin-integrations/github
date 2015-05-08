@@ -1,4 +1,5 @@
 var assert = require("chai").assert; // node.js core module
+var getenv = require('getenv');
 
 describe('github',function(){
 
@@ -7,7 +8,15 @@ describe('github',function(){
 
     describe('getFromOrg',function(){
         it('should retrieve org events from github',function(done){
-            seneca.act( {lpi:'github', cmd:'getFromOrg', org:'linchpin-integrations'}, function(err,result){
+            var token = getenv('GITHUB_TOKEN','');
+
+            var req =  {lpi:'github', cmd:'getFromOrg', org:'linchpin-integrations'};
+
+            if (token != ''){
+                req.github = {name:"Lp",token:token };
+            }
+
+            seneca.act(req, function(err,result){
                 console.log( '%j', result );
                 assert.isArray(result,'result is an Array');
                 done();
