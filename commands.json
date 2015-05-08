@@ -1,0 +1,43 @@
+{
+  "title": "Github Integration",
+  "type": "object",
+  "definitions":{
+    "github":{
+      "type":"object",
+      "LpConfig":"Integrations/github",
+      "properties":{
+        "github":{
+          "type":"object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Name"
+            },
+            "token": {
+              "title": "OAuth Token",
+              "type":"string"
+            }
+          },
+          "required": ["name","token"]
+        }
+      }
+    }
+  },
+  "OneOf":[
+    {
+      "getFromOrg": {
+        "type":"object",
+        "properties":{
+          "github":{
+            "$ref":"#definitions/github"
+          },
+          "org": {
+            "title": "Organization",
+            "type":"string"
+          }
+        },
+        "required": ["org"]
+      }
+    }
+  ]
+}
