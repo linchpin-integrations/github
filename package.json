@@ -1,6 +1,6 @@
 {
   "name": "lpi-github",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "LinchPin Github integration",
   "main": "index.js",
   "scripts": {
@@ -15,14 +15,12 @@
     "linchpin",
     "integrations"
   ],
-  "author": "Isaac Chavez",
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/linchpin-integrations/github/issues"
   },
   "homepage": "https://github.com/linchpin-integrations/github",
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "github": "^0.2.4",
     "seneca": "^0.6.1"
