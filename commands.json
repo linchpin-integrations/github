@@ -1,7 +1,18 @@
 {
-  "title": "Github Integration",
-  "type": "object",
-  "definitions":{
+  "getFromOrg": {
+    "type":"object",
+    "properties":{
+      "github":{
+        "$ref":"#definitions/github"
+      },
+      "org": {
+        "title": "Organization",
+        "type":"string"
+      }
+    },
+    "required": ["org"]
+  },
+  ".definitions":{
     "github":{
       "type":"object",
       "LpConfig":"Integrations/github",
@@ -22,22 +33,5 @@
         }
       }
     }
-  },
-  "OneOf":[
-    {
-      "getFromOrg": {
-        "type":"object",
-        "properties":{
-          "github":{
-            "$ref":"#definitions/github"
-          },
-          "org": {
-            "title": "Organization",
-            "type":"string"
-          }
-        },
-        "required": ["org"]
-      }
-    }
-  ]
+  }
 }
