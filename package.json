@@ -1,6 +1,6 @@
 {
   "name": "lpi-github",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "LinchPin Github integration",
   "main": "index.js",
   "scripts": {
