@@ -1,37 +1,36 @@
 {
   "getFromOrg": {
-    "type":"object",
-    "properties":{
-      "github":{
-        "$ref":"#definitions/github"
+    "type": "object",
+    "description":"Get Events timeline from an organization.",
+    "properties": {
+      "github": {
+        "$ref": "#/definitions/github"
       },
       "org": {
         "title": "Organization",
-        "type":"string"
+        "type": "string"
       }
     },
     "required": ["org"]
   },
-  ".definitions":{
-    "github":{
-      "type":"object",
-      "LpConfig":"Integrations/github",
-      "properties":{
-        "github":{
-          "type":"object",
-          "properties": {
-            "name": {
-              "type": "string",
-              "title": "Name"
-            },
-            "token": {
-              "title": "OAuth Token",
-              "type":"string"
-            }
-          },
-          "required": ["name","token"]
+  ".definitions": {
+    "github": {
+      "type": "object",
+      ".linchpin": "Integrations/github",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "token": {
+          "title": "OAuth Token",
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "name",
+        "token"
+      ]
     }
   }
 }
