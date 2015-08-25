@@ -39,8 +39,8 @@ module.exports = function(options) {
     }
 
     function getFromOrg(args,done){
-        var org = args.org;
-        var github = getApi(args);
+        var org = args.config.org;
+        var github = getApi(args.config);
 
         github.events.getFromOrg({org:org}, function(err,res){
             if(err){
