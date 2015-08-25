@@ -49,7 +49,7 @@ module.exports = function(options) {
 
             res.forEach(function(entry){
                 var t = new Date(entry.created_at);
-                entry.LinchPin = {"createdTime":t.toISOString()};
+                entry.LinchPin = {"CreatedTime":t.toISOString()};
             });
 
             done(null,res);
