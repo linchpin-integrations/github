@@ -10,7 +10,7 @@ describe('github',function(){
         it('should retrieve org events from github',function(done){
             var token = getenv('GITHUB_TOKEN','');
 
-            var req =  {lpi:'github', cmd:'getFromOrg', org:'linchpin-integrations'};
+            var req =  {lpi:'github', cmd:'getFromOrg', config:{org:'linchpin-integrations'}};
 
             if (token != ''){
                 req.github = {name:"Lp",token:token };
